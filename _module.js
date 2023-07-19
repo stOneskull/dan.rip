@@ -3732,12 +3732,7 @@ function create_fragment$4(ctx) {
 	let div1;
 	let footer;
 	let nav_1;
-	let t0;
-	let span;
-	let a;
-	let t1;
-	let t2;
-	let t3;
+	let t;
 	let div0;
 	let current;
 	let each_value_1 = /*nav*/ ctx[0];
@@ -3768,12 +3763,7 @@ function create_fragment$4(ctx) {
 				each_blocks_1[i].c();
 			}
 
-			t0 = space();
-			span = element("span");
-			a = element("a");
-			t1 = text("Primo");
-			t2 = text(" Powered");
-			t3 = space();
+			t = space();
 			div0 = element("div");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3795,16 +3785,7 @@ function create_fragment$4(ctx) {
 			}
 
 			nav_1_nodes.forEach(detach);
-			t0 = claim_space(footer_nodes);
-			span = claim_element(footer_nodes, "SPAN", { class: true });
-			var span_nodes = children(span);
-			a = claim_element(span_nodes, "A", { href: true, class: true });
-			var a_nodes = children(a);
-			t1 = claim_text(a_nodes, "Primo");
-			a_nodes.forEach(detach);
-			t2 = claim_text(span_nodes, " Powered");
-			span_nodes.forEach(detach);
-			t3 = claim_space(footer_nodes);
+			t = claim_space(footer_nodes);
 			div0 = claim_element(footer_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
 
@@ -3819,9 +3800,6 @@ function create_fragment$4(ctx) {
 		},
 		h() {
 			attr(nav_1, "class", "svelte-i9k4w2");
-			attr(a, "href", "https://primo.so");
-			attr(a, "class", "svelte-i9k4w2");
-			attr(span, "class", "primo svelte-i9k4w2");
 			attr(div0, "class", "social-links svelte-i9k4w2");
 			attr(footer, "class", "section-container svelte-i9k4w2");
 			attr(div1, "class", "section");
@@ -3838,12 +3816,7 @@ function create_fragment$4(ctx) {
 				}
 			}
 
-			append_hydration(footer, t0);
-			append_hydration(footer, span);
-			append_hydration(span, a);
-			append_hydration(a, t1);
-			append_hydration(span, t2);
-			append_hydration(footer, t3);
+			append_hydration(footer, t);
 			append_hydration(footer, div0);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3977,13 +3950,13 @@ function create_fragment$5(ctx) {
 	component_1 = new Component$2({
 			props: {
 				logo: {
-					"title": "Dan was here.",
 					"image": {
 						"alt": "",
 						"src": "https://ogfrjxqovwgsdzubizan.supabase.co/storage/v1/object/public/images/5a736ab3-bd44-48d8-a167-cce71fa4f58d/1254232025000Img00023.jpg",
 						"url": "https://ogfrjxqovwgsdzubizan.supabase.co/storage/v1/object/public/images/5a736ab3-bd44-48d8-a167-cce71fa4f58d/1254232025000Img00023.jpg",
 						"size": 51
-					}
+					},
+					"title": "Dan was here."
 				},
 				site_nav: [
 					{
@@ -3995,8 +3968,8 @@ function create_fragment$5(ctx) {
 					},
 					{
 						"link": {
-							"label": "stOneskull",
-							"url": "https://stOneskull.xyz"
+							"url": "https://stOneskull.xyz",
+							"label": "stOneskull"
 						}
 					}
 				]
@@ -4017,19 +3990,46 @@ function create_fragment$5(ctx) {
 				nav: [
 					{
 						"link": {
-							"url": "https://primosites.vercel.app/theme-minimal",
-							"label": "Copyright 2023"
+							"url": "https://stOneskull.xyz",
+							"label": "(c) 2023 stOneskull"
 						}
 					}
 				],
 				social: [
 					{
 						"icon": "mdi:twitter",
-						"link": { "url": "/", "label": "Twitter" }
+						"link": {
+							"url": "https://twitter.com/stOneskull",
+							"label": "Twitter"
+						}
 					},
 					{
-						"icon": "mdi:linkedin",
-						"link": { "url": "/", "label": "Linkedin" }
+						"icon": "mdi:mastodon",
+						"link": {
+							"url": "https://fosstodon.org/@stOneskull",
+							"label": "mastodon"
+						}
+					},
+					{
+						"icon": "mdi:reddit",
+						"link": {
+							"url": "https://reddit.com/u/stOneskull",
+							"label": "reddit"
+						}
+					},
+					{
+						"icon": "mdi:language-python",
+						"link": {
+							"url": "https://programming.dev/u/stOneskull",
+							"label": "lemmy"
+						}
+					},
+					{
+						"icon": "mdi:github",
+						"link": {
+							"url": "https://github.com/stOneskull",
+							"label": "github"
+						}
 					}
 				]
 			}
